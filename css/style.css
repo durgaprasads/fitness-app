@@ -1,0 +1,108 @@
+html, body, .wrapper
+{  
+background-size: cover;  
+font-family: sans-serif;  
+margin: 0;
+padding: 0;
+width: 100%;
+}  
+
+header{
+    height:50px;
+    background: black;
+    color: white;
+    position: relative;
+    line-height: 50px;
+    padding: 0 20px;
+}
+header h2{
+    font: 18px;
+
+}
+header .nav{
+    position: absolute;
+    height: 50px;
+    right:0;
+    top:0;
+}
+header .nav a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    padding:10px;
+    margin: 0 10px;
+    line-height: 50px;
+}
+header .nav a:hover{
+    cursor: pointer;
+}
+
+.container{
+    width: 100%;
+    font-size: 0;
+
+}
+.banner{
+    display: inline-block;
+    width: 70%;
+}
+.banner img{
+    width: 100%;
+}
+aside{
+    display: inline-block;
+    width: 30%;
+    font-size: 18px;
+    vertical-align: top;
+}
+p{
+    font-size: 18px;
+}
+p.about-us-summary{
+    padding: 10px;
+}
+.container.about-container{
+    display: flex;
+}
+.person{
+    margin: 20px;
+    display: flex;
+    padding: 10px;
+    width: 50%;
+}
+
+.person img{
+    width: 100px;
+}
+.person .about{
+font-size: 10px;
+padding: 10px;
+line-height: 20px;
+
+
+}
+.container.products-container{
+    display: block;
+}
+.products{
+    margin: 20px;
+    display: flex;
+    padding: 10px;
+}
+
+.products img{
+    width: 300px;
+}
+.products .about{
+font-size: 10px;
+padding: 10px;
+line-height: 20px;
+}
+@media only screen and (max-width: 780px) {
+.banner, aside {
+    width: 100%;
+}
+.container.about-container{
+    flex-direction: column;
+}
+}
