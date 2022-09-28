@@ -36,21 +36,23 @@ var myChart = new Chart(ctx, {
 function submitReview(){
   var reviewTA = document.getElementById('product-review').value;
   var productKey = document.getElementById('subject').value; //gets the key from the user
+  var ratingValue = document.getElementById('RatingSelect').value; //gets the key from the user
   if((reviewTA && reviewTA.trim().length>1)&&(productKey && productKey.trim().length>1))
   {
-    store(reviewTA,productKey)
+    store(reviewTA,productKey,ratingValue)
   }
   else{
     alert("please select product")
   }
 }
-function store(reviewTA,productKey){ //stores items in the localStorage
+function store(reviewTA,productKey,ratingValue){ //stores items in the localStorage
 
   var key=productKey+Date.now();
   var reviewsDataset =retrieveRecords(productKey);
   const reviewObject = {
     reviewId: key,
     review: reviewTA,
+    rating:ratingValue,
     dateReviewed:Date.now()
   }
   if(!reviewsDataset){
@@ -68,8 +70,13 @@ window.onload =function(){ //ensures the page is loaded before functions are exe
   var subjectSel = document.getElementById("subject");
   labels=["Massage Gun","Equalizer Bars","Resistance bands","Exercise Ball","Lifting Chains"]
   for (var x in labels) {
-    console.log(x)
+    
     subjectSel.options[subjectSel.options.length] = new Option(labels[x]);
+  }
+  var ratingSel = document.getElementById("RatingSelect");
+  ratingLabels=[5,4,3,2,1]
+  for (var x in ratingLabels) {
+    ratingSel.options[ratingSel.options.length] = new Option(ratingLabels[x]);
   }
 }
 function writeRecords(){
@@ -80,7 +87,7 @@ function writeRecords(){
   for (var x in recordObj.reviews)
     root.innerHTML += `
     <div class="container-reviews"><br>
-        <li>`+new Date(recordObj.reviews[x].dateReviewed).toISOString().split('T')[0]+`: `+recordObj.reviews[x].review +`</li>
+        <li>`+new Date(recordObj.reviews[x].dateReviewed).toISOString().split('T')[0]+`: Rating:`+recordObj.reviews[x].rating+`<br>`+recordObj.reviews[x].review +`</li>
     </div>
 `;
 }
