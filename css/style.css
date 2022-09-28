@@ -24,6 +24,8 @@ header .nav{
     height: 50px;
     right:0;
     top:0;
+    display: flex;
+
 }
 header .nav a {
     text-decoration: none;
@@ -35,6 +37,7 @@ header .nav a {
 }
 header .nav a:hover{
     cursor: pointer;
+    background-color: goldenrod;
 }
 
 .container{
@@ -110,7 +113,7 @@ line-height: 20px;
 }
 
 .products img{
-    width: 300px;
+    width: 200px;
 }
 .products .about{
 font-size: 10px;
@@ -134,11 +137,26 @@ h1{
     padding: 5px;
   
 }
+
 @media only screen and (max-width: 780px) {
-.banner, aside {
+.banner, aside, .banner-chart {
     width: 100%;
 }
 .container.about-container{
     flex-direction: column;
+}
+.products img{
+    width: 100px;
+    height: 100px;
+}
+.container.products-container{
+    flex-direction: column;
+}
+.container.chart-container{
+    flex-direction: column;
+
+}
+textarea{
+    width: 200px;
 }
 }

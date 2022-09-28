@@ -80,7 +80,7 @@ function writeRecords(){
   for (var x in recordObj.reviews)
     root.innerHTML += `
     <div class="container-reviews"><br>
-        <p>`+recordObj.reviews[x].review +`</p>
+        <li>`+new Date(recordObj.reviews[x].dateReviewed).toISOString().split('T')[0]+`: `+recordObj.reviews[x].review +`</li>
     </div>
 `;
 }
