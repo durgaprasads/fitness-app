@@ -44,7 +44,7 @@ header .nav a:hover{
 }
 .banner{
     display: inline-block;
-    width: 70%;
+    width: 70%;  
 }
 .banner img{
     width: 100%;
@@ -54,6 +54,25 @@ aside{
     width: 30%;
     font-size: 18px;
     vertical-align: top;
+}
+/* chart */
+.container.chart-container{
+    display: inline-block;
+}
+.banner-chart {
+    width: 40%;
+    display: inline-block;
+
+}.banner-chart canvas{
+    width: 100%;
+
+}
+.desc-chart{
+    display: inline-block;
+    width: 50%;
+    font-size: 18px;
+    vertical-align: top;
+    padding-left: 10%;
 }
 p{
     font-size: 18px;
@@ -97,6 +116,23 @@ line-height: 20px;
 font-size: 10px;
 padding: 10px;
 line-height: 20px;
+}
+.container-chart{
+    display: block;
+    width: 50%;
+    height: 50%;
+
+}
+h1{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+  
+}h3{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+  
 }
 @media only screen and (max-width: 780px) {
 .banner, aside {
