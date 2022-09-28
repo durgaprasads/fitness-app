@@ -9,21 +9,16 @@
 
 var ctx = document.getElementById("myChart").getContext('2d');
 console.log(ctx)
+datasetObject=retrieveRecordsChart()
 var myChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: [
-      'Massage Gun',
-      'Equalizer Bars',
-      'Resistance bands',
-      'Exercise Ball',
-      'Lifting Chains'
-        ],
+    labels: datasetObject.labels,
     datasets: [{
       label: 'My First Dataset',
-      data: [1, 3,2,10,5],
+      data: datasetObject.data,
       backgroundColor: [
-        'red','blue', 'orange', 'red', 'black'
+        'red','blue', 'orange', 'green', 'black'
       ],
       hoverOffset: 4
     }]
@@ -38,11 +33,21 @@ var myChart = new Chart(ctx, {
   }
   }
 });
-function store(){ //stores items in the localStorage
+function submitReview(){
   var reviewTA = document.getElementById('product-review').value;
   var productKey = document.getElementById('subject').value; //gets the key from the user
+  if((reviewTA && reviewTA.trim().length>1)&&(productKey && productKey.trim().length>1))
+  {
+    store(reviewTA,productKey)
+  }
+  else{
+    alert("please select product")
+  }
+}
+function store(reviewTA,productKey){ //stores items in the localStorage
+
   var key=productKey+Date.now();
-  var reviewsDataset =retrieveRecords();
+  var reviewsDataset =retrieveRecords(productKey);
   const reviewObject = {
     reviewId: key,
     review: reviewTA,
@@ -61,15 +66,15 @@ function store(){ //stores items in the localStorage
 }
 window.onload =function(){ //ensures the page is loaded before functions are executed.
   var subjectSel = document.getElementById("subject");
-  for (var x in myChart.data.labels) {
+  labels=["Massage Gun","Equalizer Bars","Resistance bands","Exercise Ball","Lifting Chains"]
+  for (var x in labels) {
     console.log(x)
-    subjectSel.options[subjectSel.options.length] = new Option(myChart.data.labels[x]);
+    subjectSel.options[subjectSel.options.length] = new Option(labels[x]);
   }
-  document.getElementById("reviewForm").onsubmit = store
-
 }
 function writeRecords(){
-  var recordObj=retrieveRecords()
+  var productKey = document.getElementById('subject').value; //gets the key from the user
+  var recordObj=retrieveRecords(productKey)
   const root = document.getElementById('root');
   root.innerHTML="";
   for (var x in recordObj.reviews)
@@ -79,10 +84,30 @@ function writeRecords(){
     </div>
 `;
 }
-function retrieveRecords(){ //retrieves items in the localStorage
-  var productKey = document.getElementById('subject').value; //gets the key from the user
-  console.log("retrieve records");
+function retrieveRecords(productKey){ //retrieves items in the localStorage
+  if(!productKey || ''=== productKey){
+    alert("Please select the product");
+    return false;
+  }
   var records = window.localStorage.getItem(productKey);
   return JSON.parse(records);
- 
+}
+function retrieveRecordsChart(){
+  var records = window.localStorage;
+  labels=new Array()
+    data=new Array()
+  if(records)
+  {
+    
+    for(let i=0;i < window.localStorage.length;i++){
+      labels[i]=window.localStorage.key(i)
+      data[i]=retrieveRecords(window.localStorage.key(i)).reviews.length
+    }
+  } reviewObject = {
+    labels: labels,
+    data: data,
+    dateReviewed:Date.now()
+  }
+  return reviewObject;
+
 }
