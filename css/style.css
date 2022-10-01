@@ -75,6 +75,14 @@ p.about-us-summary{
     justify-content: flex-start;
     width: 80%;
     padding: 2%;
+    border: 1px solid ;
+    margin: auto;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.person p{
+    padding: 4%;
 }
 
 .person img{
@@ -82,16 +90,19 @@ p.about-us-summary{
 }
 
 .person .about{
-margin-top: 50px;
+margin-top: 20px;
 font-size: 10px;
 padding: 10px;
 line-height: 20px;
+margin-left: 20px;
+width: 30%;
 
 
 }
 .container.products-container{
     display: block;
     margin: 10px;
+    margin-bottom: 200px;
 }
 
 .products{
@@ -99,6 +110,12 @@ line-height: 20px;
     display: flex;
     /* padding: 15px; */
     border: 1px solid;
+}
+
+.products .button-container{
+    margin-top: 5%;
+    font-size: medium;
+     font-weight:500 ;
 }
 
 .products img{
@@ -111,6 +128,18 @@ font-size: 10px;
 padding: 5%; 
 line-height: 20px;
 background-color: blanchedalmond;
+}
+
+
+.contact .about{
+    display: flex;
+    justify-content:space-around;
+    width: 80%;
+    padding: 2%;
+    border: 1px solid ;
+    margin: auto;
+    margin-top: 20px;
+    color: black;
 }
 
 
@@ -147,9 +176,8 @@ footer .hire-btn:hover{
 .container.about-container{
     flex-direction: column;
 }
-
-.products{
-    height: 200px;
-    
+.contact .about{
+    flex-direction: column;
 }
+
 }
