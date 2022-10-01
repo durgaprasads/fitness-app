@@ -51,6 +51,7 @@ header .nav a:hover{
 }
 .banner img{
     width: 100%;
+    padding: 5px;
 }
 aside{
     display: inline-block;
@@ -75,7 +76,7 @@ p.about-us-summary{
     justify-content: flex-start;
     width: 80%;
     padding: 2%;
-    border: 1px solid ;
+    /* border: 1px solid ; */
     margin: auto;
     margin-bottom: 20px;
     color: black;
@@ -102,14 +103,12 @@ width: 30%;
 .container.products-container{
     display: block;
     margin: 10px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 .products{
     margin: 20px;
     display: flex;
-    /* padding: 15px; */
-    border: 1px solid;
 }
 
 .products .button-container{
@@ -127,7 +126,7 @@ text-align: center;
 font-size: 10px;
 padding: 5%; 
 line-height: 20px;
-background-color: blanchedalmond;
+/* background-color: blanchedalmond; */
 }
 
 
@@ -136,7 +135,7 @@ background-color: blanchedalmond;
     justify-content:space-around;
     width: 80%;
     padding: 2%;
-    border: 1px solid ;
+    /* border: 1px solid ; */
     margin: auto;
     margin-top: 20px;
     color: black;
