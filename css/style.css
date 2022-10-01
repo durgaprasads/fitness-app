@@ -17,12 +17,14 @@ header{
 }
 header h2{
     font: 18px;
+    font-family: 'Roboto', sans-serif;
 
 }
+
 header .nav{
     position: absolute;
     height: 50px;
-    right:0;
+    right: 5px;;
     top:0;
 }
 header .nav a {
@@ -30,11 +32,12 @@ header .nav a {
     font-size: 14px;
     color: white;
     padding:10px;
-    margin: 0 10px;
+    margin: 0 5px;
     line-height: 50px;
 }
 header .nav a:hover{
     cursor: pointer;
+    color: #FFAD01;
 }
 
 .container{
@@ -54,6 +57,7 @@ aside{
     width: 30%;
     font-size: 18px;
     vertical-align: top;
+    margin-top: 10%;
 }
 p{
     font-size: 18px;
@@ -63,18 +67,22 @@ p.about-us-summary{
 }
 .container.about-container{
     display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
 }
 .person{
-    margin: 20px;
     display: flex;
-    padding: 10px;
-    width: 50%;
+    justify-content: flex-start;
+    width: 80%;
+    padding: 2%;
 }
 
 .person img{
     width: 100px;
 }
+
 .person .about{
+margin-top: 50px;
 font-size: 10px;
 padding: 10px;
 line-height: 20px;
@@ -83,26 +91,65 @@ line-height: 20px;
 }
 .container.products-container{
     display: block;
+    margin: 10px;
 }
+
 .products{
     margin: 20px;
     display: flex;
-    padding: 10px;
+    /* padding: 15px; */
+    border: 1px solid;
 }
 
 .products img{
     width: 300px;
 }
+
 .products .about{
+text-align: center;
 font-size: 10px;
-padding: 10px;
+padding: 5%; 
 line-height: 20px;
+background-color: blanchedalmond;
 }
+
+
+footer{ 
+    text-align: center; 
+    background: black; 
+    color: #ddd; 
+    height: 20px ;
+    padding-bottom:2%;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    
+}
+
+footer .hire-btn{ 
+    padding: 0.5% 0.5%; 
+    border-radius: 4px; 
+    margin: 50px;
+	box-shadow: inset 0 0px 4px rgba(0,0,0,.3); 
+    background: #FFAD01; 
+    color: #fff;
+	-webkit-transition: all .2s ease; transition: all .2s ease; text-decoration: none;}
+
+footer .hire-btn:hover{ 
+    background-color: #fff; 
+    color: black; }
+
+
 @media only screen and (max-width: 780px) {
 .banner, aside {
     width: 100%;
 }
 .container.about-container{
     flex-direction: column;
+}
+
+.products{
+    height: 200px;
+    
 }
 }
