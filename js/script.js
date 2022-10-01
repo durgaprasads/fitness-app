@@ -68,6 +68,7 @@ function store(reviewTA,productKey,ratingValue){ //stores items in the localStor
 }
 window.onload =function(){ //ensures the page is loaded before functions are executed.
   var subjectSel = document.getElementById("subject");
+
   labels=["Massage Gun","Equalizer Bars","Resistance bands","Exercise Ball","Lifting Chains"]
   for (var x in labels) {
     
@@ -103,14 +104,17 @@ function retrieveRecordsChart(){
   var records = window.localStorage;
   labels=new Array()
     data=new Array()
-  if(records)
-  {
+    var chartMsg = document.getElementById("chart-message");
+
+  if(records&&records.length>0)
+  { chartMsg.innerHTML = `<h3 id="chart-message"></h3>`;
     
     for(let i=0;i < window.localStorage.length;i++){
       labels[i]=window.localStorage.key(i)
       data[i]=retrieveRecords(window.localStorage.key(i)).reviews.length
     }
-  } reviewObject = {
+  } 
+  reviewObject = {
     labels: labels,
     data: data,
     dateReviewed:Date.now()
