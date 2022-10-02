@@ -82,23 +82,20 @@ p.about-us-summary{
     color: black;
 }
 
-.person p{
-    padding: 4%;
-}
 
 .person img{
-    width: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 .person .about{
-margin-top: 20px;
-font-size: 10px;
-padding: 10px;
-line-height: 20px;
-margin-left: 20px;
-width: 30%;
+    font-size: 10px;
+    padding: 10px;
+    line-height: 20px;
 
-
+}
+.person p{
+    width:100%
 }
 .container.products-container{
     display: block;
@@ -166,9 +163,32 @@ footer .hire-btn{
 footer .hire-btn:hover{ 
     background-color: #fff; 
     color: black; }
-
+    
+    
 
 @media only screen and (max-width: 780px) {
+    h2,a{
+        font-size: 8px;
+    }
+ 
+header .nav{
+    position: absolute;
+    height: 10px;
+    right: 0px;;
+    top:0;
+}
+header .nav a {
+    text-decoration: none;
+    font-size: 8px;
+    color: white;
+    padding:0px;
+    line-height: 1px;
+}
+    .products img{
+        width: 100px;
+        height: 100px;
+    }
+   
 .banner, aside {
     width: 100%;
 }
