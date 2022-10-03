@@ -62,9 +62,13 @@ aside{
 }
 p{
     font-size: 18px;
+    padding: 5px;
+
 }
-p.about-us-summary{
-    padding: 10px;
+.about-us-summary h2{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 .container.about-container{
     display: flex;
@@ -120,7 +124,7 @@ p.about-us-summary{
 
 .products .about{
 text-align: center;
-font-size: 10px;
+font-size: 18px;
 padding: 5%; 
 line-height: 20px;
 /* background-color: blanchedalmond; */
@@ -168,26 +172,33 @@ footer .hire-btn:hover{
 
 @media only screen and (max-width: 780px) {
     h2,a{
-        font-size: 8px;
+        font-size: 12px;
     }
- 
+    header{
+        height:auto;
+        background: black;
+        color: white;
+        position: relative;
+        line-height: 30px;
+
+    }
 header .nav{
-    position: absolute;
-    height: 10px;
-    right: 0px;;
-    top:0;
+    position: static;
 }
 header .nav a {
     text-decoration: none;
-    font-size: 8px;
+    font-size: 10px;
     color: white;
-    padding:0px;
-    line-height: 1px;
+    padding: 3px;
+    margin: 0;
 }
-    .products img{
-        width: 100px;
-        height: 100px;
-    }
+.products img{
+    width: 100px;
+    height: 100px;
+}.person img{
+    width: 100px;
+    height: 100px;
+}
    
 .banner, aside {
     width: 100%;
