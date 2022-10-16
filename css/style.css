@@ -1,0 +1,234 @@
+html, body, .wrapper
+{  
+background-size: cover;  
+font-family: sans-serif;  
+margin: 0;
+padding: 0;
+width: 100%;
+}  
+
+header{
+    height:50px;
+    background: black;
+    color: white;
+    position: relative;
+    line-height: 50px;
+    padding: 0 20px;
+}
+
+header h2{
+    font: 18px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+header img{
+    max-height: 100%;
+    color: white;
+}
+
+header .nav{
+    position: absolute;
+    height: 50px;
+    right: 5px;;
+    top:0;
+}
+header .nav a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    padding:10px;
+    margin: 0 5px;
+    line-height: 50px;
+}
+header .nav a:hover{
+    cursor: pointer;
+    color: #FFAD01;
+}
+
+.container{
+    width: 100%;
+    font-size: 0;
+
+}
+.banner{
+    display: inline-block;
+    width: 66%;
+}
+.mySlides img{
+    padding-bottom: 0px;
+    vertical-align: middle;
+    max-width: 950px;
+}
+aside{
+    display: inline-block;
+    width: 30%;
+    font-size: 18px;
+    vertical-align: top;
+    margin-top: 10%;
+}
+p{
+    font-size: 18px;
+    padding: 5px;
+
+}
+.about-us-summary h2{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.container.about-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.person{
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    padding: 2%;
+    /* border: 1px solid ; */
+    margin: auto;
+    margin-bottom: 20px;
+    color: black;
+}
+
+
+.person img{
+    width: 150px;
+    height: 150px;
+}
+
+.person .about{
+    font-size: 10px;
+    padding: 10px;
+    line-height: 20px;
+
+}
+
+.person p{
+    width:100%
+}
+.container.products-container{
+    display: block;
+    margin: 10px;
+    margin-bottom: 100px;
+}
+
+.products{
+    margin: 20px;
+    display: flex;
+}
+
+.products .button-container{
+    margin-top: 5%;
+    font-size: medium;
+     font-weight:500 ;
+}
+
+.cart-row{
+    float: right;
+    padding-right: 5%;
+}
+
+
+.products img{
+    width: 300px;
+}
+
+.products .about{
+text-align: center;
+font-size: 18px;
+padding: 5%; 
+line-height: 20px;
+/* background-color: blanchedalmond; */
+}
+
+
+.contact .about{
+    display: flex;
+    justify-content:space-around;
+    width: 80%;
+    padding: 2%;
+    /* border: 1px solid ; */
+    margin: auto;
+    margin-top: 20px;
+    color: black;
+}
+.about img{
+    max-width: 100px;
+    height: 100px;
+}
+
+footer{ 
+    text-align: center; 
+    background: black; 
+    color: #ddd; 
+    height: 20px ;
+    padding:1%;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    
+}
+
+footer .hire-btn{ 
+    padding: 0.5% 0.5%; 
+    border-radius: 4px; 
+    margin: 50px;
+	box-shadow: inset 0 0px 4px rgba(0,0,0,.3); 
+    background: #FFAD01; 
+    color: #fff;
+	-webkit-transition: all .2s ease; transition: all .2s ease; text-decoration: none;}
+
+footer .hire-btn:hover{ 
+    background-color: #fff; 
+    color: black; }
+    
+    
+
+@media only screen and (max-width: 780px) {
+    h2,a{
+        font-size: 12px;
+    }
+    header{
+        height:auto;
+        background: black;
+        color: white;
+        position: relative;
+        line-height: 30px;
+
+    }
+header .nav{
+    position: static;
+}
+header .nav a {
+    text-decoration: none;
+    font-size: 10px;
+    color: white;
+    padding: 3px;
+    margin: 0;
+}
+.products img{
+    width: 100px;
+    height: 100px;
+}.person img{
+    width: 100px;
+    height: 100px;
+}
+.about img{
+    width: 50px;
+    height: 50px;
+}
+   
+.banner, aside {
+    width: 100%;
+}
+.container.about-container{
+    flex-direction: column;
+}
+.contact .about{
+    flex-direction: column;
+}
+
+}

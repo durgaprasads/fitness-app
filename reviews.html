@@ -1,0 +1,83 @@
+<!DOCtype html>
+
+<head>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reviews</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    
+</head>
+
+<body>
+    <div class="wrapper">
+    
+        <header>
+            
+            <h2 >
+                Home Fitness
+            </h2>
+            <div class="nav">
+                <a href="home.html">Home</a>
+                <a href="Products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+        </header>
+
+        <div class="container chart-container">
+            <br>
+            <h1> Our Customer's Feedback </h1>
+
+            <br>
+            <h3 id="chart-message">No Feedbacks yet. Please submit your reviews</h3>
+             <section class="banner-chart">
+                <canvas id="myChart"></canvas>
+            </section>
+            <aside class="desc-chart"> <br>
+            <br>
+           
+            <div id="formDiv">
+                <br>
+                <form id="reviewForm" onsubmit="submitReview()">
+                    <h3 id="product-display">Enter Your Valuable Feedback on our Products</h3>
+                    <br>
+                    <label for="Product">Select a Product:</label>
+                    <select name="subject" id="subject">
+                       <option value="" selected="selected">Select Product</option>
+                     </select>
+                      <br>
+                      <br>
+                      <label for="Rating">Select a Rating:</label>
+                      <select name="RatingSelect" id="RatingSelect">
+                         <option value="0" selected="selected">0</option>
+                       </select>
+                   
+                      <br>
+                    
+                   <br>
+                    <label for="Product">Review of Product:</label>
+                   <br>
+                    <textarea id="product-review" name="product-review" placeholder="Enter here" rows="4" cols="50">
+                    </textarea>
+                   <br> 
+                    <button type="submit">Save Review</button>
+                </form> 
+                <br>
+                    <br>
+                <button type="button" onclick="writeRecords()">View Reviews</button>
+
+                <div id="root">
+                   
+                </div>
+          </div>
+        </aside>
+          <script src="js/script.js"></script>
+
+        </body>
+      </html>
+      
