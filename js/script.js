@@ -33,6 +33,34 @@ var myChart = new Chart(ctx, {
   }
   }
 });
+function preloadReviews(){
+
+reviewsPreload=[
+  {
+  "productKey":"Massage Gun",
+  "reviewTA":"Extremely Satisfied.We assessed how satisfying a massage each device delivered, using its specs—and how we felt during and after",
+  "rating":5},
+  {
+    "productKey":"Equalizer Bars",
+    "reviewTA":"These dip bars are great! They're very stable on my carpet, and exactly what I was hoping for",
+    "rating":3},{
+      "productKey":"Exercise Ball",
+      "reviewTA":"helped me be able to walk around easier and have less hip/back pain (not full relief but enough to manage normal tasks while chasing a toddler around).",
+      "rating":4},{
+        "productKey":"Lifting Chains",
+        "reviewTA":"They fit a 2inch bar perfectly. Weight is good, and so is the length. I’m 5’8” tall. Good length for my bench and my squat.",
+        "rating":2},
+    {
+      "productKey":"Resistance bands",
+      "reviewTA":"These are really great!",
+      "rating":5}
+      
+]
+for (let i = 0; i < reviewsPreload.length; i++) {
+  store(reviewsPreload[i].reviewTA,reviewsPreload[i].productKey,reviewsPreload[i].rating)
+}
+
+}
 function submitReview(){
   var reviewTA = document.getElementById('product-review').value;
   var productKey = document.getElementById('subject').value; //gets the key from the user
@@ -79,6 +107,7 @@ window.onload =function(){ //ensures the page is loaded before functions are exe
   for (var x in ratingLabels) {
     ratingSel.options[ratingSel.options.length] = new Option(ratingLabels[x]);
   }
+  preloadReviews()
 }
 function writeRecords(){
   var productKey = document.getElementById('subject').value; //gets the key from the user
