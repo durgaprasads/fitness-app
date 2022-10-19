@@ -8,7 +8,9 @@ width: 100%;
 }  
 h3{
 font-size:24px;
+font-weight:bold;
 padding-top:1%;
+    text-align: center;
 }
 header{
     height:50px;
@@ -53,7 +55,7 @@ header .nav a:hover{
 }
 .banner{
     display: inline-block;
-    width: 70%;
+    width: 100%;
 }
 .banner img{
     width: 100%;
@@ -62,7 +64,8 @@ aside{
     display: inline-block;
     width: 30%;
     font-size: 18px;
-    vertical-align: top;
+    vertical-align: center;
+    padding-top:10%;
 }
 .mySlides img{
     width: 100%;
@@ -285,6 +288,7 @@ header .nav a {
     margin: 0;
 }
 .products img{
+align-self:center;
     width: 150px;
     height: 150px;
 }.person img{
@@ -299,9 +303,8 @@ header .nav a {
     width: 100%;
 }
 
-.products{
+.products,.person{
     flex-direction: column;
-
 }
 .container.about-container{
     flex-direction: column;
