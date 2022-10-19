@@ -6,41 +6,32 @@ margin: 0;
 padding: 0;
 width: 100%;
 }  
-h3{
-font-size:24px;
-font-weight:bold;
-padding-top:1%;
-text-align: center;
-}
+
 header{
     height:50px;
-    background: green;
+    background: black;
     color: white;
     position: relative;
     line-height: 50px;
     padding: 0 20px;
 }
 
-button{
-    background-color: green;
-    border: none;
+header h2{
+    font: 18px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+header img{
+    max-height: 100%;
     color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-  }
-
-
+}
 
 header .nav{
     position: absolute;
     height: 50px;
-    right:0;
+    right: 5px;;
     top:0;
-    display: flex;
-
 }
 header .nav a {
     text-decoration: none;
@@ -48,7 +39,7 @@ header .nav a {
     color: white;
     padding:10px;
     margin: 0 5px;
-    line-height: 30px;
+    line-height: 50px;
 }
 header .nav a:hover{
     cursor: pointer;
@@ -62,44 +53,19 @@ header .nav a:hover{
 }
 .banner{
     display: inline-block;
-    width: 70%;
-}
-.banner img{
-    width: 100%;
-}
-aside{
-    display: inline-block;
-    width: 30%;
-    font-size: 18px;
-    vertical-align: center;
-    padding-top:10%;
+    width: 66%;
 }
 .mySlides img{
-    width: 100%;
+    padding-bottom: 0px;
+    vertical-align: middle;
+    max-width: 950px;
 }
 aside{
     display: inline-block;
     width: 30%;
-    vertical-align: top;
-}
-
-.container.chart-container{
-    display: inline-block;
-}
-.banner-chart {
-    width: 40%;
-    display: inline-block;
-
-}
-.banner-chart canvas{
-    width: 100%;
-
-}
-.desc-chart{
-    display: inline-block;
-    width: 40%;
     font-size: 18px;
-    padding:3%;
+    vertical-align: top;
+    margin-top: 10%;
 }
 p{
     font-size: 18px;
@@ -109,6 +75,7 @@ p{
 .about-us-summary h2{
     font-size: 25px;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 .container.about-container{
     display: flex;
@@ -123,7 +90,7 @@ p{
     /* border: 1px solid ; */
     margin: auto;
     margin-bottom: 20px;
-    color: green;
+    color: black;
 }
 
 
@@ -149,11 +116,9 @@ p{
 }
 
 .products{
-/*
     margin: 3%;
-*/ padding:5px;
     display: flex;
-    border: 1px solid lightgrey;
+    border: 1px solid lightgray;
 }
 
 .products .button-container{
@@ -169,22 +134,30 @@ p{
 
 
 .products img{
-    width: 300px;
-        height: 300px;
+    width: 30%;
+    margin: 1%;
+    border: 2px solid lightgray;
+    border-radius: 12px;
 }
 
 .products .about{
-text-align: left;
+text-align: center;
 font-size: 18px;
 padding: 5%; 
 line-height: 20px;
 /* background-color: blanchedalmond; */
 }
-.container-chart{
-    display: block;
-    width: 50%;
-    height: 50%;
-}
+
+.cartBtn {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+  }
 
 .contact .about{
     display: flex;
@@ -194,16 +167,16 @@ line-height: 20px;
     /* border: 1px solid ; */
     margin: auto;
     margin-top: 20px;
-    color: green;
+    color: black;
 }
 .about img{
-    width: 100px;
+    max-width: 100px;
     height: 100px;
 }
 
 footer{ 
     text-align: center; 
-    background: green; 
+    background: black; 
     color: #ddd; 
     height: 20px ;
     padding:1%;
@@ -224,7 +197,7 @@ footer .hire-btn{
 
 footer .hire-btn:hover{ 
     background-color: #fff; 
-    color: green; }
+    color: black; }
 
     /* The Modal (background) */
 .modal {
@@ -267,7 +240,7 @@ footer .hire-btn:hover{
   .buttonContainer{
     text-align: end;
   }
-  
+ 
   .close {
     color: #aaa;
     float: right;
@@ -277,27 +250,20 @@ footer .hire-btn:hover{
   
   .close:hover,
   .close:focus {
-    color: green;
+    color: black;
     text-decoration: none;
     cursor: pointer;
   }
     
-  
+    
 
 @media only screen and (max-width: 780px) {
-banner, aside {
-    width: 100%;
-}
-.desc-chart{
-    width: 100%;
-
-}
- h2,a{
+    h2,a{
         font-size: 12px;
     }
     header{
         height:auto;
-        background: green;
+        background: black;
         color: white;
         position: relative;
         line-height: 30px;
@@ -308,43 +274,33 @@ header .nav{
 }
 header .nav a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 10px;
     color: white;
     padding: 3px;
     margin: 0;
 }
 .products img{
-align-self:center;
-    width: 150px;
-    height: 150px;
+    max-width: 20%;
+    height: 30%;
+    vertical-align: middle;
+    margin-top: 15%;
 }.person img{
     width: 100px;
     height: 100px;
 }
 .about img{
-   width: 100px;
-      height: 100px;
+    width: 50px;
+    height: 50px;
 }
-.banner-chart{
+   
+.banner, aside {
     width: 100%;
-}
-
-.products,.person{
-    flex-direction: column;
 }
 .container.about-container{
     flex-direction: column;
 }
-.container.chart-container{
-    flex-direction: column;
-}
-.mySlides img{
-    width: 100%;
-}
 .contact .about{
     flex-direction: column;
 }
-canvas{
-width:500px;}
 
 }
