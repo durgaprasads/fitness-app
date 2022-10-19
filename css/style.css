@@ -9,7 +9,6 @@ width: 100%;
 h3{
 font-size:24px;
 font-weight:bold;
-padding-top:1%;
 text-align: center;
 }
 header{
@@ -99,7 +98,7 @@ aside{
     display: inline-block;
     width: 40%;
     font-size: 18px;
-    padding:3%;
+    padding:5%;
 }
 p{
     font-size: 18px;
@@ -149,9 +148,7 @@ p{
 }
 
 .products{
-/*
-    margin: 3%;
-*/ padding:5px;
+     padding:5px;
     display: flex;
     border: 1px solid lightgrey;
 }
@@ -250,7 +247,7 @@ footer .hire-btn:hover{
     align-items: center;
   }
   
-  .modal-details h4,button,p{
+  .modal-details h4,button{
     text-align: center;
   }
 
@@ -289,8 +286,7 @@ banner, aside {
     width: 100%;
 }
 .desc-chart{
-    width: 100%;
-
+    width: 90%;
 }
  h2,a{
         font-size: 12px;
