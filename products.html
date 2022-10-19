@@ -274,10 +274,19 @@ window.onclick = function(event) {
 }
 
 function payment(){
+   
+   if(document.getElementById('fname').value==""  || 
+   document.getElementById('lname').value=="" || 
+   document.getElementById('email').value=="" ||
+   document.getElementById('phoneNumber').value=="" || 
+   document.getElementById('address').value==""){
+      alert("Please enter the valid information");
+   }else{
 clearCart();
 alert("Request is processing... Thank you for shopping with us!");
 modal.style.display = "none";
 totalCount = 0;
+   }
 
 }
    
