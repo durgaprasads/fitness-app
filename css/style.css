@@ -14,7 +14,7 @@ text-align: center;
 }
 header{
     height:50px;
-    background: green;
+    background: black;
     color: white;
     position: relative;
     line-height: 50px;
@@ -22,7 +22,7 @@ header{
 }
 
 button{
-    background-color: green;
+    background-color: black;
     border: none;
     color: white;
     padding: 15px 20px;
@@ -123,7 +123,7 @@ p{
     /* border: 1px solid ; */
     margin: auto;
     margin-bottom: 20px;
-    color: green;
+    color: black;
 }
 
 
@@ -194,7 +194,7 @@ line-height: 20px;
     /* border: 1px solid ; */
     margin: auto;
     margin-top: 20px;
-    color: green;
+    color: black;
 }
 .about img{
     width: 100px;
@@ -203,7 +203,7 @@ line-height: 20px;
 
 footer{ 
     text-align: center; 
-    background: green; 
+    background: black; 
     color: #ddd; 
     height: 20px ;
     padding:1%;
@@ -224,7 +224,7 @@ footer .hire-btn{
 
 footer .hire-btn:hover{ 
     background-color: #fff; 
-    color: green; }
+    color: black; }
 
     /* The Modal (background) */
 .modal {
@@ -277,7 +277,7 @@ footer .hire-btn:hover{
   
   .close:hover,
   .close:focus {
-    color: green;
+    color: black;
     text-decoration: none;
     cursor: pointer;
   }
@@ -297,7 +297,7 @@ banner, aside {
     }
     header{
         height:auto;
-        background: green;
+        background: black;
         color: white;
         position: relative;
         line-height: 30px;
