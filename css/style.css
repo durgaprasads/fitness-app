@@ -6,7 +6,10 @@ margin: 0;
 padding: 0;
 width: 100%;
 }  
-
+h3{
+font-size:24px;
+padding-top:1%;
+}
 header{
     height:50px;
     background: black;
@@ -16,9 +19,6 @@ header{
     padding: 0 20px;
 }
 
-header h2{
-    font: 18px;
-}
 
 /*header img{
     max-height: 100%;
@@ -55,9 +55,7 @@ header .nav a:hover{
     display: inline-block;
     width: 70%;
 }
-.mySlides img{
-    padding-bottom: 0px;
-    vertical-align: middle;
+.banner img{
     width: 100%;
 }
 aside{
@@ -65,7 +63,14 @@ aside{
     width: 30%;
     font-size: 18px;
     vertical-align: top;
-    margin-top: 10%;
+}
+.mySlides img{
+    width: 100%;
+}
+aside{
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
 }
 
 .container.chart-container{
@@ -75,16 +80,16 @@ aside{
     width: 40%;
     display: inline-block;
 
-}.banner-chart canvas{
+}
+.banner-chart canvas{
     width: 100%;
 
 }
 .desc-chart{
     display: inline-block;
-    width: 50%;
+    width: 40%;
     font-size: 18px;
-    vertical-align: top;
-    padding-left: 10%;
+    padding:3%;
 }
 p{
     font-size: 18px;
@@ -94,7 +99,6 @@ p{
 .about-us-summary h2{
     font-size: 25px;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
 }
 .container.about-container{
     display: flex;
@@ -135,9 +139,11 @@ p{
 }
 
 .products{
+/*
     margin: 3%;
+*/ padding:5px;
     display: flex;
-    border: 1px solid black;
+    border: 1px solid lightgrey;
 }
 
 .products .button-container{
@@ -153,20 +159,21 @@ p{
 
 
 .products img{
-    width: 30%;
-    margin: 1%;
-    border: 5px solid black;
-    border-radius: 12px;
+    width: 300px;
+        height: 300px;
 }
 
 .products .about{
-text-align: center;
+text-align: left;
 font-size: 18px;
 padding: 5%; 
 line-height: 20px;
 /* background-color: blanchedalmond; */
 }
-
+.container-chart{
+    display: block;
+    width: 50%;
+    height: 50%;
 
 .contact .about{
     display: flex;
@@ -179,7 +186,7 @@ line-height: 20px;
     color: black;
 }
 .about img{
-    max-width: 100px;
+    width: 100px;
     height: 100px;
 }
 
@@ -246,10 +253,17 @@ footer .hire-btn:hover{
     cursor: pointer;
   }
     
-    
+  }
 
 @media only screen and (max-width: 780px) {
-    h2,a{
+banner, aside {
+    width: 100%;
+}
+.desc-chart{
+    width: 100%;
+
+}
+ h2,a{
         font-size: 12px;
     }
     header{
@@ -265,33 +279,43 @@ header .nav{
 }
 header .nav a {
     text-decoration: none;
-    font-size: 10px;
+    font-size: 14px;
     color: white;
     padding: 3px;
     margin: 0;
 }
 .products img{
-    max-width: 20%;
-    height: 30%;
-    vertical-align: middle;
-    margin-top: 15%;
+    width: 150px;
+    height: 150px;
 }.person img{
     width: 100px;
     height: 100px;
 }
 .about img{
-    width: 50px;
-    height: 50px;
+   width: 100px;
+      height: 100px;
 }
-   
-.banner, aside {
+.banner-chart{
     width: 100%;
+}
+
+.products{
+    flex-direction: column;
+
 }
 .container.about-container{
     flex-direction: column;
 }
+.container.chart-container{
+    flex-direction: column;
+}
+.mySlides img{
+    width: 100%;
+}
 .contact .about{
     flex-direction: column;
 }
+canvas{
+width:500px;}
 
 }

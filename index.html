@@ -10,13 +10,13 @@
 
 <body>
     <div class="wrapper">
-    
+
         <header>
             <h2 >
                  Home Fitness
             </h2>
             <div class="nav">
-                <a href="home.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="Products.html">Products</a>
                 <a href="about.html">About Us</a>
                 <a href="reviews.html">Reviews</a>
@@ -26,19 +26,19 @@
 
         <div class="container">
             <section class="banner">
-                
+
             <div class="slideshow-container">
 
             <div class="mySlides fade">
             <div class="numbertext">1 / 6</div>
             <img src="./images/img1.png" >
             </div>
-    
+
             <div class="mySlides fade">
             <div class="numbertext">2/ 6</div>
             <img src="./images/img2.png" >
             </div>
-    
+
                 <div class="mySlides fade">
              <div class="numbertext">3/ 6</div>
              <img src="./images/img3.png" >
@@ -53,28 +53,27 @@
                <div class="numbertext">5/ 6</div>
                <img src="./images/img5.png">
                </div>
-    
+
     </div>
     <br>
     <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
-            </section>
+</section>
             <aside>
-                <br>
                 <p style=" text-align: center; font-weight: 800; font-size: 25px; "> EXPERIENCE. EXPERTISE. EXCELLENCE. </p>
                <br>
-                <p style=" text-align:justify; margin: 20px;">
+                <p>
                     You realize that life isn't slowing down and health is more important than ever if you want to live the life you love, and love the life you live.
-                    
+
                     <br><br>
                     Discover the best fintess gear from the largest selection around the world. By working with multiple vendors and various warehouses we are able to quickly deliver a larger variation of products to you, in under a week! Orders over $35 ship for free.
-    
+
                     We have thousands of satisfied customers, many that are loyal returning customers that we help meet their fitness goals.  We hope you will become one of very latest happy clients.</p>
             </aside>
         </div>
@@ -93,20 +92,20 @@
 <script>
     let slideIndex = 0;
     showSlides();
-    
+
     function showSlides() {
       let i;
       let slides = document.getElementsByClassName("mySlides");
       let dots = document.getElementsByClassName("dot");
       for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+        slides[i].style.display = "none";
       }
       slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
+      if (slideIndex > slides.length) {slideIndex = 1}
       for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
       }
-      slides[slideIndex-1].style.display = "block";  
+      slides[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " active";
       setTimeout(showSlides, 2000); // Change image every 2 seconds
     }

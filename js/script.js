@@ -107,7 +107,6 @@ window.onload =function(){ //ensures the page is loaded before functions are exe
   for (var x in ratingLabels) {
     ratingSel.options[ratingSel.options.length] = new Option(ratingLabels[x]);
   }
-  preloadReviews()
 }
 function writeRecords(){
   var productKey = document.getElementById('subject').value; //gets the key from the user
@@ -134,15 +133,17 @@ function retrieveRecordsChart(){
   labels=new Array()
     data=new Array()
     var chartMsg = document.getElementById("chart-message");
-
-  if(records&&records.length>0)
-  { chartMsg.innerHTML = `<h3 id="chart-message"></h3>`;
+  if(records&&records.length==0){
+    preloadReviews()
+    console.log("preloading reviews")
+   }
+ chartMsg.innerHTML = `<h3 id="chart-message"></h3>`;
     
     for(let i=0;i < window.localStorage.length;i++){
       labels[i]=window.localStorage.key(i)
       data[i]=retrieveRecords(window.localStorage.key(i)).reviews.length
     }
-  } 
+
   reviewObject = {
     labels: labels,
     data: data,
